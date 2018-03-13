@@ -1,0 +1,18 @@
+{
+	"content_type_id" : 2,
+	"player/age" : 30,
+	"player/portait" : "/db/PICTURES/CMS/222900/222915.jpg",
+	"player/dod" : "0000-00-00",
+	"player/bowling-styles" : "right-arm offbreak",
+	"player/teams" : ["INDIA"],
+	"player/retired?" : "N",
+	"player/name" : "RG Sharma",
+	"player/dob" : "1987-04-30",
+	"player/id" : 48405,
+	"isSR" : true,
+	"player/batting-styles" : "right-hand bat",
+	"player/known-as" : "Rohit Sharma",
+	"fc/id" : "50844454-f8eb-4670-b54c-934e81c429a3",
+	"player/pob" : "Bansod, Nagpur, Maharashtra",
+	"player/country" : "INDIA"
+}
