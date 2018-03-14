@@ -4,7 +4,8 @@ const initState = {
   playerStats:[],
   userInfo:{
     isLoggedIn: false
-  }
+  },
+  showModal:true,
 }
 const playersReducer = (state = initState || {}, action) =>{
   debugger;
@@ -19,6 +20,11 @@ const playersReducer = (state = initState || {}, action) =>{
         return {
           ...state,
           playerStats: action.payload.data
+        }
+        case 'CLOSE_MODAL':
+        return {
+          ...state,
+          showModal: false
         }
       case 'UPDATE_LOGIN_STATUS':
         return {
