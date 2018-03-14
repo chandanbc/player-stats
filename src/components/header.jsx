@@ -1,9 +1,12 @@
 import React from 'react';
-
+import {connect} from 'react-redux';
 import {Nav,NavItem,NavDropdown,MenuItem,Navbar,Grid,Row,Col,Image} from 'react-bootstrap';
+import {logout} from '../actions';
 
-import userlogo from '../assets/img/user-icon.png'
-const Header = () => 
+import userlogo from '../assets/img/user-icon.png';
+
+const handleOnSelect=(evt)=> console.log(evt);
+const Header = ({userData,handleOnSelect}) => 
 <Navbar inverse collapseOnSelect>
 <Navbar.Header>
   <Navbar.Brand>
@@ -13,9 +16,10 @@ const Header = () =>
 </Navbar.Header>
 <Navbar.Collapse>
   <Nav pullRight>
-    <NavItem eventKey={1} href="#">
-      Login
-    </NavItem>
+  {Object.keys(userData).length>0 &&
+    // <NavItem eventKey={1} href="#">
+    //   Login
+    // </NavItem>
    
 
     <NavDropdown eventKey={3} title={ 
@@ -24,19 +28,26 @@ const Header = () =>
     <Col xs={3}>
     <Image src="http://p.imgci.com/db/PICTURES/CMS/222900/222915.jpg" responsive thumbnail />
     
-   <span> Chandan</span>
+   <span> {userData.username}</span>
 
     </Col>
     </Row>
-} id="basic-nav-dropdown">
-      <MenuItem eventKey={3.1}>Profile</MenuItem>
+} id="basic-nav-dropdown" onSelect={handleOnSelect}>
+      <MenuItem eventKey="profile">Profile</MenuItem>
       <MenuItem divider />
-      <MenuItem eventKey={3.2}>Logout</MenuItem>
-    </NavDropdown>
+      <MenuItem eventKey="logout">Logout</MenuItem>
+    </NavDropdown>}
   </Nav>
 </Navbar.Collapse>
 </Navbar>;
 ;
 
+const mapDispatchToProps=(dispatch)=>{
+  return{
+    handleOnSelect:()=>{
+    dispatch(logout())
+  }
+  }
+}
 
-export default Header;
+export default connect(null,mapDispatchToProps)(Header);

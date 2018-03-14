@@ -1,4 +1,4 @@
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware,compose } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import { createLogger } from 'redux-logger';
 import axiosReduxMiddleware from 'redux-axios-middleware';
@@ -12,14 +12,17 @@ const clients=axios.create({
   responseType:'json'
 });
 
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const enhancer = composeEnhancers(
+  applyMiddleware(
+    thunkMiddleware,
+    loggerMiddleware,
+    axiosReduxMiddleware(clients),
+  ),
+  // other store enhancers if any
+);
+
 export default function configureStore(preloadedState) {
-  return createStore(
-    rootReducer,
-    preloadedState,
-    applyMiddleware(
-      thunkMiddleware,
-      loggerMiddleware,
-      axiosReduxMiddleware(clients),
-    )
-  )
+  return createStore(rootReducer, enhancer);
 }

@@ -46,6 +46,12 @@ export const UpdateUserName = (username) =>{
     }
 }
 
+export const logout = () =>{
+    return {
+        type: 'LOGOUT',
+    }
+}
+
 export const UpdatePassword = (password) =>{
     return {
         type: 'UPDATE_PASSWORD',

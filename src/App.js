@@ -10,22 +10,25 @@ import {closeModal} from '../src/actions';
  import './App.css';
 import container from './components/container';
 
-const App=({close,showModal})=> 
+const App=({close,showModal,userInfo,isUserLoggedIn})=> 
       <div className="App">
-        <Header />
+        <Header userData={userInfo}/>
         <div>
-          <Container/>
-          {/* <Modal title="title" modalVisible={showModal} close={close}>
-          <Header />
-          </Modal> */}
-{/* <Login/> */}
+          { isUserLoggedIn ? <Container />:
+          
+           <Modal title="title" modalVisible={showModal} close={close}>
+          <Login/>
+          </Modal> }
+
         </div>
         <Footer />
       </div>
 
 const mapStateToProps=(state)=>{
   return {
-    showModal : state.players.showModal
+    showModal : state.players.showModal,
+    userInfo:state.players.userInfo,
+    isUserLoggedIn:state.players.isLoggedIn
 }
 }      
 

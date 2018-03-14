@@ -3,7 +3,7 @@ const initState = {
   playerInfo:{},
   playerStats:[],
   userInfo:{
-    isLoggedIn: false
+    //isLoggedIn: false
   },
   login:{
     username:'',
@@ -46,22 +46,23 @@ const playersReducer = (state = initState || {}, action) =>{
             password: action.payload
           }
         }
-      case 'UPDATE_LOGIN_STATUS':
-        return {
-          ...state,
-          userInfo: {
-            ...state.userInfo,
-            isLoggedIn: true
-          }
-        }
+      case 'LOGOUT':
+        return initState;
         case 'LOGIN_SUCCESS':
         debugger;
         const result=action.payload.data;
+        const info=result.filter(item=>item.username==state.login.username && item.password==state.login.password);
         
         return {
           ...state,
-          userInfo: result.filter(item=>item.username==state.login.username && item.password==state.login.password)
+          userInfo: (info && info.length>0)?info[0]:{},
+          playerStats:[],
+          playerInfo:{},
+          isLoggedIn:(info && info.length>0)?true:false,
+          showModal:false,
+          login:{},
         }
+        
       default:
         return state
     }
