@@ -1,0 +1,23 @@
+[
+{ 
+   "username":"sachin",
+    "password":"sachin",
+    "fullname":"Sachin Tendulkar",
+    "designation":"Batting Coach",
+     "country":"India",
+},
+{ 
+   "username":"ganguly",
+    "password":"ganguly",
+    "fullname":"Saurav Ganguly",
+    "designation":"Batting Coach",
+     "country":"India",
+},
+{ 
+   "username":"kumble",
+    "password":"kumble",
+    "fullname":"Anil Kumble",
+    "designation":"Bowling Coach",
+     "country":"India",
+}
+]

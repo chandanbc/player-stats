@@ -25,3 +25,30 @@ export const closeModal = () =>{
         type: 'CLOSE_MODAL',
     }
 }
+
+
+
+export const Login = () =>{
+    return {
+        type: ['LOGIN'],
+        payload:{
+            request:{
+                url:'/user.json'
+            }
+        }
+    }
+}
+
+export const UpdateUserName = (username) =>{
+    return {
+        type: 'UPDATE_USERNAME',
+        payload:username,
+    }
+}
+
+export const UpdatePassword = (password) =>{
+    return {
+        type: 'UPDATE_PASSWORD',
+        payload:password,
+    }
+}

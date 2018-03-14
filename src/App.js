@@ -4,17 +4,21 @@ import Header from './components/header';
 import Container from './components/container';
 import Footer from './components/footer';
 import Modal from './components/modal';
+import Login from './components/login';
 import {closeModal} from '../src/actions';
 
  import './App.css';
+import container from './components/container';
 
 const App=({close,showModal})=> 
       <div className="App">
         <Header />
         <div>
-          <Modal title="title" modalVisible={showModal} close={close}>
+          <Container/>
+          {/* <Modal title="title" modalVisible={showModal} close={close}>
           <Header />
-          </Modal>
+          </Modal> */}
+{/* <Login/> */}
         </div>
         <Footer />
       </div>
