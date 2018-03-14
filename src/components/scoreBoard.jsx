@@ -2,7 +2,7 @@ import React from 'react';
 import { Panel} from 'react-bootstrap';
 import Statistics from './statistics';
 
-const ScoreBoard = ({data}) => <div>
+const ScoreBoard = ({data}) => 
      <Panel>
                             <Panel.Heading>
                                 <Panel.Title componentClass="h3">Player Stats</Panel.Title>
@@ -11,7 +11,7 @@ const ScoreBoard = ({data}) => <div>
                                 <Statistics data={data} />
                             </Panel.Body>
                          </Panel>
-</div>;
+;
 
 
 export default ScoreBoard;
