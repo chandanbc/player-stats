@@ -14,17 +14,17 @@ import container from './components/container';
 const App=({close,showModal,userInfo,isUserLoggedIn})=> 
       <div className="App">
         <Header userData={userInfo}/>
-        <div>
+        <div className="app-body">
           { isUserLoggedIn ? <Container />:
           
-           <Modal title="title" modalVisible={showModal} close={close}>
+           <Modal title="Login" modalVisible={showModal} close={close}>
           <Login/>
           
           </Modal> }
 
           { (isUserLoggedIn && Object.keys(userInfo).length>0) && 
           
-            <Modal title="profile" modalVisible={ (showModal && Object.keys(userInfo).length>0)} close={close}>
+            <Modal title="Profile Details" modalVisible={ (showModal && Object.keys(userInfo).length>0)} close={close}>
          <Profile userInfo={userInfo}/>
          
          </Modal> }

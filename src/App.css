@@ -1,4 +1,11 @@
-
+html body .container-fluid , .app-body{
+  position: absolute;
+  top: 50px;
+  bottom: 30px;
+  right: 0;
+  left: 0;
+  overflow-y: auto;
+}
 .container-fluid{
   width: 100% !important;
 }
@@ -11,4 +18,13 @@
 
 .align-text{
   margin-top: 5px;
+}
+.app-footer{
+  background-color: #333;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 130px;
 }
