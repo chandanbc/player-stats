@@ -17,11 +17,7 @@ const Header = ({userData,handleOnSelect}) =>
 <Navbar.Collapse>
   <Nav pullRight>
   {Object.keys(userData).length>0 &&
-    // <NavItem eventKey={1} href="#">
-    //   Login
-    // </NavItem>
-   
-
+    
     <NavDropdown eventKey={3} title={ 
           
       <div className="pull-left">

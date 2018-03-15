@@ -12,7 +12,10 @@ const Footer = () =>
     </address>
     </Col> 
 <Col xs={12} md={6}>
-    Social Links
+<a href="#" className="fa fa-facebook"></a>
+<a href="#" className="fa fa-twitter"></a>
+<a href="#" className="fa fa-google"></a>
+<a href="#" className="fa fa-linkedin"></a>
 </Col>
 </Row>
 </footer>

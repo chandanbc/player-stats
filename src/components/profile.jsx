@@ -5,24 +5,24 @@ import {Grid,Row,Col} from 'react-bootstrap';
 
 const Profile=({userInfo})=> 
 
-<Grid className='container-fluid'>
+<Grid>
 <Row className="show-grid">
     
-        <Col md={6} >
+        <Col md={3} >
            <label>UserName</label>:{userInfo.fullname}
         </Col> 
        
-        <Col md={6} >
+        <Col md={3} >
             <label>Email</label>:ajsjajsa
         </Col>
 </Row>
 <Row className="show-grid">
     
-        <Col md={6}>
+        <Col md={3}>
            <label>Designation</label>:{userInfo.designation}
         </Col> 
     
-    <Col md={6}>
+    <Col md={3}>
     <label>Country</label>:{userInfo.country}
     
     </Col>
