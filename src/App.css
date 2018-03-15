@@ -1,6 +1,7 @@
-html body .container-fluid , .app-body{
+html body .container-fluid ,
+ .app-body{
   position: absolute;
-  top: 30px;
+  top: 50px;
   bottom: 30px;
   right: 0;
   left: 0;
@@ -69,3 +70,12 @@ html body .container-fluid , .app-body{
     z-index: 99;
   }
 } 
+
+.custom-tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  background-color: black;
+  color: #fff;
+  
+}

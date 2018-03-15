@@ -15,6 +15,7 @@ const App=({close,showModal,userInfo,isUserLoggedIn})=>
       <div className="App">
         <Header userData={userInfo}/>
         <div className="app-body">
+          
           { isUserLoggedIn ? <Container />:
           
            <Modal title="Login" modalVisible={showModal} close={close}>

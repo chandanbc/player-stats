@@ -1,6 +1,6 @@
 import React from 'react';
 import {ResponsiveContainer, BarChart, CartesianGrid, XAxis ,YAxis, Tooltip, Legend, Bar } from 'recharts';
-
+import CustomToolTip from './tooltip';
 
 const Statistics = ({data}) => 
 <ResponsiveContainer minHeight={265} minWidth={100}>
@@ -8,7 +8,8 @@ const Statistics = ({data}) =>
   <CartesianGrid strokeDasharray="3 3" />
   <XAxis dataKey="year" />
   <YAxis dataKey="batsman/runs" />
-  <Tooltip />
+  <Tooltip content={<CustomToolTip/>}/>
+  {/* <Tooltip/> */}
   <Legend />
   <Bar dataKey="batsman/runs" fill="#8884d8" />
   

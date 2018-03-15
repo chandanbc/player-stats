@@ -53,7 +53,6 @@ const playersReducer = (state = initState || {}, action) =>{
       case 'LOGOUT':
         return initState;
         case 'LOGIN_SUCCESS':
-        debugger;
         const result=action.payload.data;
         const info=result.filter(item=>item.username==state.login.username && item.password==state.login.password);
         

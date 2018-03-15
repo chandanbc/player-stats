@@ -12,7 +12,6 @@ componentDidMount(){
     this.props.dispatch(getPlayerStats());
 }
 render(){
-    debugger;
     const playerDetails =this.props.players.playerInfo; 
     const getYear=(date)=>new Date(date).getFullYear();
     this.props.players.playerStats.map(item=>item.year=getYear(item["match/startdate"]))
@@ -21,7 +20,8 @@ render(){
     
 
     return( 
-            <Grid className='container-fluid'>
+        <div className="container-fluid">
+            <Grid>
                 <Row className="show-grid">
                     {(Object.keys(playerDetails).length > 0) &&
                         <Col xs={12} md={4}>
@@ -34,7 +34,8 @@ render(){
                     }
                     </Col>
                 </Row>
-            </Grid>)
+            </Grid>
+            </div>)
     }
 }
 
