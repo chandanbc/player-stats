@@ -3,8 +3,8 @@ import {ResponsiveContainer, BarChart, CartesianGrid, XAxis ,YAxis, Tooltip, Leg
 
 
 const Statistics = ({data}) => 
-<ResponsiveContainer minHeight={600} minWidth={800}>
-<BarChart width={830} height={270} data={data}>
+<ResponsiveContainer minHeight={265} minWidth={100}>
+<BarChart width={530} height={270} data={data}>
   <CartesianGrid strokeDasharray="3 3" />
   <XAxis dataKey="year" />
   <YAxis dataKey="batsman/runs" />

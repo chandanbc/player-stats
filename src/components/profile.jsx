@@ -8,23 +8,22 @@ const Profile=({userInfo})=>
 <Grid className='container-fluid'>
 <Row className="show-grid">
     
-        <Col xs={12} md={4}>
-           <label>UserName</label>:sajajj
+        <Col md={6} >
+           <label>UserName</label>:{userInfo.fullname}
         </Col> 
-    
-    <Col xs={6} md={8}>
-    <label>Email</label>:ajsjajsa
-    
-    </Col>
+       
+        <Col md={6} >
+            <label>Email</label>:ajsjajsa
+        </Col>
 </Row>
 <Row className="show-grid">
     
-        <Col xs={12} md={4}>
-           <label>Designation</label>:sajajj
+        <Col md={6}>
+           <label>Designation</label>:{userInfo.designation}
         </Col> 
     
-    <Col xs={6} md={8}>
-    <label>Designation</label>:ajsjajsa
+    <Col md={6}>
+    <label>Country</label>:{userInfo.country}
     
     </Col>
 </Row>

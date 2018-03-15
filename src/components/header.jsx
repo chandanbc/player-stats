@@ -24,15 +24,11 @@ const Header = ({userData,handleOnSelect}) =>
 
     <NavDropdown eventKey={3} title={ 
           
-          <Row>
-    <Col xs={3}>
-    <Image src="http://p.imgci.com/db/PICTURES/CMS/222900/222915.jpg" responsive thumbnail />
-    
-   <span> {userData.username}</span>
-
-    </Col>
-    </Row>
-} id="basic-nav-dropdown" onSelect={handleOnSelect}>
+      <div className="pull-left">
+        <Image className="profile-img pull-left " src="http://p.imgci.com/db/PICTURES/CMS/222900/222915.jpg" responsive circle />
+        <span className="pull-left align-text"> {userData.username}</span>
+      </div>
+      } id="basic-nav-dropdown" onSelect={handleOnSelect}>
       <MenuItem eventKey="1">Profile</MenuItem>
       <MenuItem divider />
       <MenuItem eventKey="2">Logout</MenuItem>

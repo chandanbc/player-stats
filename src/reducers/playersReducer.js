@@ -13,7 +13,6 @@ const initState = {
 }
 const playersReducer = (state = initState || {}, action) =>{
   console.log(action.type);
-  debugger;
     switch (action.type) {
       case 'PLAYER_DETAILS_SUCCESS':
         return {

@@ -24,7 +24,7 @@ const getFormattedDate=(dob)=>{
      <p> <b>Played For :</b> 
          <span> {playerDetails['player/teams'].map(i=> `${i}`)}</span></p>                                
      <p> <b>Country :</b> <span> {playerDetails['player/country']}</span></p>
-     
+     <p></p>
     </div>
     <div className="pull-right">
      <Image src={`http://p.imgci.com/${playerDetails['player/portait']}`} thumbnail/>

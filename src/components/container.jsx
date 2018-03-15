@@ -28,7 +28,7 @@ render(){
                            <PlayerInfo playerDetails={playerDetails} />
                         </Col> 
                     }
-                    <Col xs={6} md={8}>
+                    <Col xs={12} md={8}>
                     {playerStats.length>0 &&
                     <PlayerStats data={playerStats} />
                     }
