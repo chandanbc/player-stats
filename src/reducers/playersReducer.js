@@ -30,6 +30,11 @@ const playersReducer = (state = initState || {}, action) =>{
           ...state,
           showModal: false
         }
+        case 'SHOW_MODAL':
+        return{
+          ...state,
+          showModal:true,
+        }
         case 'UPDATE_USERNAME':
         return {
           ...state,

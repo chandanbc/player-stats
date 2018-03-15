@@ -26,6 +26,11 @@ export const closeModal = () =>{
     }
 }
 
+export const showModal = () =>{
+    return {
+        type: 'SHOW_MODAL',
+    }
+}
 
 
 export const Login = () =>{

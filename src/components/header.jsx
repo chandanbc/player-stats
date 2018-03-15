@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {Nav,NavItem,NavDropdown,MenuItem,Navbar,Grid,Row,Col,Image} from 'react-bootstrap';
-import {logout} from '../actions';
+import {logout,showModal} from '../actions';
 
 import userlogo from '../assets/img/user-icon.png';
 
@@ -33,9 +33,9 @@ const Header = ({userData,handleOnSelect}) =>
     </Col>
     </Row>
 } id="basic-nav-dropdown" onSelect={handleOnSelect}>
-      <MenuItem eventKey="profile">Profile</MenuItem>
+      <MenuItem eventKey="1">Profile</MenuItem>
       <MenuItem divider />
-      <MenuItem eventKey="logout">Logout</MenuItem>
+      <MenuItem eventKey="2">Logout</MenuItem>
     </NavDropdown>}
   </Nav>
 </Navbar.Collapse>
@@ -44,7 +44,7 @@ const Header = ({userData,handleOnSelect}) =>
 
 const mapDispatchToProps=(dispatch)=>{
   return{
-    handleOnSelect:()=>{
+    handleOnSelect:(evt)=>{evt=="1"?dispatch(showModal()):
     dispatch(logout())
   }
   }
