@@ -3,9 +3,8 @@ import {connect} from 'react-redux';
 import {Nav,NavItem,NavDropdown,MenuItem,Navbar,Grid,Row,Col,Image} from 'react-bootstrap';
 import {logout,showModal} from '../actions';
 
-import userlogo from '../assets/img/user-icon.png';
 
-const handleOnSelect=(evt)=> console.log(evt);
+
 const Header = ({userData,handleOnSelect}) => 
 <Navbar inverse collapseOnSelect>
 <Navbar.Header>

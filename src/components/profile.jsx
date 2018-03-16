@@ -13,7 +13,7 @@ const Profile=({userInfo})=>
         </Col> 
        
         <Col md={3} >
-            <label>Email</label>:ajsjajsa
+            <label>Email</label>:{userInfo.email}
         </Col>
 </Row>
 <Row className="show-grid">

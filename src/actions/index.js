@@ -20,6 +20,17 @@ export const getPlayerStats = () =>{
     }
 }
 
+export const getAddress = () =>{
+    return {
+        type: ['GET_ADDRESS'],
+        payload:{
+            request:{
+                url:'/company.json'
+            }
+        }
+    }
+}
+
 export const closeModal = () =>{
     return {
         type: 'CLOSE_MODAL',

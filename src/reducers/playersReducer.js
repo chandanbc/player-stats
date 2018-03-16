@@ -10,6 +10,7 @@ const initState = {
     password:'',
   },
   showModal:true,
+  address:{}
 }
 const playersReducer = (state = initState || {}, action) =>{
   console.log(action.type);
@@ -24,6 +25,12 @@ const playersReducer = (state = initState || {}, action) =>{
           ...state,
           playerStats: action.payload.data
         }
+        case 'GET_ADDRESS_SUCCESS':
+        return {
+          ...state,
+          address: action.payload.data
+        }
+        
         case 'CLOSE_MODAL':
         return {
           ...state,
